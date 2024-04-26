@@ -8,9 +8,11 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Comercial barcoComercial = new Comercial();
-        Pantalan pantalan = new Pantalan(new ArrayList<Amarre>(), "Recreo");
-        //barcoComercial.encajaTipo(pantalan);
-        System.out.println(barcoComercial.encajaTipo(pantalan));
+        Comercial barcoComercial = new Comercial(30);
+        Amarre amarre = new Amarre(25f);
+        System.out.println(barcoComercial.tamaño);
+        System.out.println(amarre.tamaño);
+        System.out.println(barcoComercial.encajaTamaño(amarre));
+
     }
 }

@@ -1,22 +1,22 @@
 package domain.barcos;
 
-public class Comercial extends Barco{
+public class Recreo extends Barco{
 
-    public String carga;
+    public String permiso;
 
     @Override
     public String toString() {
-        return "Comercial{" +
-                "carga='" + carga + '\'' +
+        return "Recreo{" +
+                "permiso='" + permiso + '\'' +
                 ", matricula='" + matricula + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", tamaño=" + tamaño +
                 '}';
     }
 
-    public Comercial (String matricula, String nombre, float tamaño, String carga) {
-        super(matricula, nombre, tamaño);
-        this.carga = carga;
-    }
+    public Recreo (String matricula, String nombre, float tamaño, String permiso) {
 
+        super(matricula, nombre, tamaño);
+        this.permiso = permiso;
+    }
 }

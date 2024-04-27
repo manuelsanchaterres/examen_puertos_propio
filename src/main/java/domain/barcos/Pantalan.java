@@ -9,7 +9,7 @@ public class Pantalan {
     // DEBE SER STATIC PARA INCREMENTARLO CADA VEZ QUE SE CREE UNA NUEVA INSTANCIA DE PANTALAN
     public static int id = 0;
     public ArrayList<Amarre> listaAmarres;
-    public String tipo = "Comercial";
+    public String tipo;
 
     public Pantalan (ArrayList<Amarre> listaAmarres, String tipo) {
 

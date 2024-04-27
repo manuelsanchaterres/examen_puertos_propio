@@ -2,7 +2,7 @@ package domain.barcos;
 
 import java.util.ArrayList;
 
-abstract class Barco {
+public abstract class Barco {
 
     public String matricula;
     public String nombre;
@@ -11,10 +11,6 @@ abstract class Barco {
     public Barco(String matricula, String nombre, float tamaño) {
         this.matricula = matricula;
         this.nombre = nombre;
-        this.tamaño = tamaño;
-    }
-
-    public Barco(float tamaño) {
         this.tamaño = tamaño;
     }
 
@@ -54,5 +50,12 @@ abstract class Barco {
 //        tamaño entre el amarre y el barco. (1 Punto)
 
         return amarre.tamaño - this.tamaño;
+    }
+
+    public static void cargarBarcosEntrantes() {
+
+        Puerto.barcosEntrantes.add(new Comercial("1234", "Poseidón", 80, "Carga Textil"));
+        Puerto.barcosEntrantes.add(new Recreo("2345", "Tritón", 6, "Permiso recreativo"));
+
     }
 }

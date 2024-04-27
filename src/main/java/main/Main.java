@@ -7,11 +7,10 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        Barco.cargarBarcosEntrantes();
-        for (Barco barco: Puerto.barcosEntrantes) {
-
-            System.out.println(barco);
-        }
-        ;
+        Puerto puerto = new Puerto();
+//        Barco.cargarBarcosEntrantes(puerto.barcosEntrantes);
+//        System.out.println(puerto.barcosEntrantes);
+        Puerto.simular(puerto.listadoPantalanes);
+        Puerto.verAmarre(puerto.listadoPantalanes);
     }
 }

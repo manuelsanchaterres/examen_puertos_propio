@@ -9,10 +9,23 @@ public class Amarre {
 
     public static int id = 0;
     public float tamaño;
-    private boolean ocupado;
-    private Barco barco;
+    public boolean ocupado;
+    public Barco barco;
 
-    public Amarre (float tamaño) {
+    @Override
+    public String toString() {
+        return "Amarre{" +
+                "id=" + id +
+                ", tamaño=" + tamaño +
+                ", ocupado=" + ocupado +
+                ", barco=" + barco +
+                '}';
+    }
+
+    public Amarre(float tamaño, boolean ocupado, Barco barco) {
+        id++;
         this.tamaño = tamaño;
+        this.ocupado = ocupado;
+        this.barco = barco;
     }
 }

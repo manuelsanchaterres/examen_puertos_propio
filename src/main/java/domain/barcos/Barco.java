@@ -8,6 +8,15 @@ public abstract class Barco {
     public String nombre;
     public float tamaño;
 
+    @Override
+    public String toString() {
+        return "Barco{" +
+                "matricula='" + matricula + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", tamaño=" + tamaño +
+                '}';
+    }
+
     public Barco(String matricula, String nombre, float tamaño) {
         this.matricula = matricula;
         this.nombre = nombre;
@@ -52,10 +61,10 @@ public abstract class Barco {
         return amarre.tamaño - this.tamaño;
     }
 
-    public static void cargarBarcosEntrantes() {
+    public static void cargarBarcosEntrantes(ArrayList<Barco> barcosEntrantes) {
 
-        Puerto.barcosEntrantes.add(new Comercial("1234", "Poseidón", 80, "Carga Textil"));
-        Puerto.barcosEntrantes.add(new Recreo("2345", "Tritón", 6, "Permiso recreativo"));
+        barcosEntrantes.add(new Comercial("1234", "Poseidón", 80, "Carga Textil"));
+        barcosEntrantes.add(new Recreo("2345", "Tritón", 6, "Permiso recreativo"));
 
     }
 }
